@@ -1,0 +1,49 @@
+h2 {
+    text-decoration: underline;
+    text-shadow: .5px .5px 2px black;
+}
+
+.boldText {
+    font-weight: bold;
+}
+
+.italicText {
+    font-style:italic;
+}
+
+.italicBoldLegend { /*select legend to bold and italic*/
+    font-style: italic;
+    font-weight: bold;
+}
+
+legend { /*all legend to this color*/
+    color: #A0522D;
+}
+
+div {
+    float:left;
+}
+
+fieldset {
+    border-radius: 10px;
+}
+
+.textBoxSize40 {
+    width: 40px;
+}
+
+.textBoxSize30 {
+    width:30px
+}
+
+.textBoxSize300 {
+    width:300px
+}
+
+.footer {
+    text-align: center;
+    border-style: double;
+    border-width: 3px;
+    width: 100%;
+    border-radius: 10px;
+}
