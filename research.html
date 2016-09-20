@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Research Form</title>
+    <link rel="stylesheet" type="text/css" href="research.css">
+    <script src="research.js"></script>
+</head>
+
+<body>
+    <h2>Research Form</h2>
+    
+    <form action="researchProcessing.php" method="get" id="formId" onsubmit="return main()">
+        <fieldset>
+            <legend class="italicBoldLegend">General Information</legend>
+            FirstName: <input type="text" name="firstname" required/> &nbsp; LastName: <input type="text" name="lastname" required/>
+            <br><br>
+            Phone: <input type="text" name="phoneFirstPart" class="textBoxSize30" id="phoneFirstPart" required/>-<input type="text" name="phoneSecondPart" id="phoneSecondPart" class="textBoxSize30" required/>-<input type="text" name="phoneThirdPart" id="phoneThirdPart" class="textBoxSize40" required/> &nbsp;
+            Email: <input type="email" name="email" class="textBoxSize300" required/> 
+        </fieldset>
+        
+        <br>
+        
+        <fieldset>
+            <legend class="italicBoldLegend">Research Study Data</legend>
+            
+            <fieldset>
+                <legend>Age/Height/Weight</legend>
+                <div class="boldText">Age: <input type="number" name="age" class="textBoxSize40" min="1" max="125" required/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Height:</div>
+                
+                
+                <div class="italicText"><input type="number" name="heightFeet" class="textBoxSize30" min="2" max="7" required/>Feet</div>
+                <div class="italicText"><input type="number" name="heightInches" class="textBoxSize40" min="0" max="12" required/>Inches</div>
+                <div class="boldText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Weight:</div>
+                <div class="italicText"><input type="number" name="weight" class="textBoxSize40" min="1" max="600" required/>Pounds</div>
+            </fieldset>
+            
+            <br>
+            
+            <fieldset>
+                <legend>Conditions</legend>
+                Which of the following conditions are present in your family? (Check all that apply)
+                <br>
+                <input type="checkbox" name="highBloodPressure" id="highBloodPressure" value="High Blood Pressure"/>High Blood Pressure
+                <input type="checkbox" name="diabetes" id="diabetes" value="Diabetes"/>Diabetes
+                <input type="checkbox" name="glaucoma" id="glaucoma"value="Glaucoma"/>Glaucoma
+                <input type="checkbox" name="asthma" id="asthma" value="Asthma"/>Asthma
+                <input type="checkbox" name="none" id="none" value="None"/>None
+            </fieldset>
+            
+            <br>
+            
+            <fieldset>
+                <legend>Time Period</legend>
+                How long have you experienced any of the above conditions?
+                <br>
+                <input type="radio" id="periodNever" name="period" value="Never"/>Never
+                <input type="radio" id="periodLessOne" name="period" value="Less than a year"/>Less than a year
+                <input type="radio" id="periodOneToTwo" name="period" value="One to two years"/>One to two years
+                <input type="radio" id="periodMoreTwo" name="period" value="More than two years"/>More than two years
+            </fieldset>
+            
+            <br>
+            
+            <fieldset>
+                <legend>Study Information</legend>
+                Which study are you taking a part of?
+                <select name="studyType">
+                    <option value="Long Term" selected="selected">Long Term</option>
+                    <option value="Short Term">Short Term</option>
+                </select>
+                &nbsp;&nbsp;
+                Assigned Study Id:
+                <input type="text" name="firstFourDigits" id="firstFourDigits" placeholder="A###" class="textBoxSize40" required/>-
+                <input type="text" name="secondFourDigits" id="secondFourDigits" placeholder="B###"  class="textBoxSize40" required/>
+            </fieldset>
+            
+            <br>
+            
+            <fieldset>
+                <legend>Additional Information (Comments)</legend>
+                <textarea name="comments" rows="7" cols="100"></textarea>
+            </fieldset>
+            
+        </fieldset>
+        
+        <br>
+        
+        <fieldset>
+            <input type="reset" value="Clear Form">&nbsp;
+            <input type="submit" value="Submit Information" name="submitButton" id="submitButton" />
+            <!--<input type="button" id="submitButton" name="submitButton" value="Submit" />-->
+        </fieldset>
+        
+        <br>
+        
+        <div class="footer">
+            CMSC Research Institute &#174;
+        </div>
+    </form>
+</body>
+</html>
